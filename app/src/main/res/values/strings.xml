@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">Android Quiz</string>
+    <string name="question_1">What is used to share data between Applications?</string>
+    <string name="answer_1a">Intents</string>
+    <string name="answer_1b">Content Provider</string>
+    <string name="answer_1c">Bundle</string>
+    <string name="answer_1d">Thread</string>
+    <string name="question_2">What languages is used to develop Android?</string>
+    <string name="answer_2a">Python</string>
+    <string name="answer_2b">Java</string>
+    <string name="answer_2c">Kotlin</string>
+    <string name="answer_2d">C</string>
+    <string name="answer_2e">C++</string>
+    <string name="answer_2f">.Net</string>
+    <string name="question_3">Which component is used to run task in the background without graphic UI?</string>
+    <string name="answer_3">Services</string>
+    <string name="question_4">What is mean by ANR?</string>
+    <string name="answer_4a">Application not Recognized</string>
+    <string name="answer_4b">Android not Recognized</string>
+    <string name="answer_4c">Application Not Responding</string>
+    <string name="answer_4d">None of these</string>
+
 </resources>

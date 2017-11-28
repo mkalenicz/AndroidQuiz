@@ -11,57 +11,57 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    int goodAnswers = 0;
-    int badAnswers = 0;
+    int goodAnswers;
+    int badAnswers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SetQandA();
+        setQandA();
     }
 
-    public void SetQandA() {
+    public void setQandA() {
         TextView question = (TextView) findViewById(R.id.question_text_view);
-        question.setText("What is used to share data between Applications?");
+        question.setText(R.string.question_1);
         RadioButton radioButtonA = (RadioButton) findViewById(R.id.radioButtonA);
-        radioButtonA.setText("Intents");
+        radioButtonA.setText(R.string.answer_1a);
         RadioButton radioButtonB = (RadioButton) findViewById(R.id.radioButtonB);
-        radioButtonB.setText("Content Provider");
+        radioButtonB.setText(R.string.answer_1b);
         RadioButton radioButtonC = (RadioButton) findViewById(R.id.radioButtonC);
-        radioButtonC.setText("Bundle");
+        radioButtonC.setText(R.string.answer_1c);
         RadioButton radioButtonD = (RadioButton) findViewById(R.id.radioButtonD);
-        radioButtonD.setText("Thread");
+        radioButtonD.setText(R.string.answer_1d);
 
 
         TextView question2 = (TextView) findViewById(R.id.question2_text_view);
-        question2.setText("What languages is used to develop Android?");
+        question2.setText(R.string.question_2);
         CheckBox checkBoxA = (CheckBox) findViewById(R.id.checkboxA);
-        checkBoxA.setText("Python");
+        checkBoxA.setText(R.string.answer_2a);
         CheckBox checkBoxB = (CheckBox) findViewById(R.id.checkboxB);
-        checkBoxB.setText("Java");
+        checkBoxB.setText(R.string.answer_2b);
         CheckBox checkBoxC = (CheckBox) findViewById(R.id.checkboxC);
-        checkBoxC.setText("Kotlin");
+        checkBoxC.setText(R.string.answer_2c);
         CheckBox checkBoxD = (CheckBox) findViewById(R.id.checkboxD);
-        checkBoxD.setText("C");
+        checkBoxD.setText(R.string.answer_2d);
         CheckBox checkBoxE = (CheckBox) findViewById(R.id.checkboxE);
-        checkBoxE.setText("C++");
+        checkBoxE.setText(R.string.answer_2e);
         CheckBox checkBoxF = (CheckBox) findViewById(R.id.checkboxF);
-        checkBoxF.setText(".Net");
+        checkBoxF.setText(R.string.answer_2f);
 
         TextView question3 = (TextView) findViewById(R.id.question3_text_view);
-        question3.setText("Which component is used to run task in the background without graphic UI?");
+        question3.setText(R.string.question_3);
 
         TextView question4 = (TextView) findViewById(R.id.question4_text_view);
-        question4.setText("What is mean by ANR?");
+        question4.setText(R.string.question_4);
         RadioButton radioButtonA4 = (RadioButton) findViewById(R.id.radioButtonA4);
-        radioButtonA4.setText("Application not Recognized");
+        radioButtonA4.setText(R.string.answer_4a);
         RadioButton radioButtonB4 = (RadioButton) findViewById(R.id.radioButtonB4);
-        radioButtonB4.setText("Android not Recognized");
+        radioButtonB4.setText(R.string.answer_4b);
         RadioButton radioButtonC4 = (RadioButton) findViewById(R.id.radioButtonC4);
-        radioButtonC4.setText("Application Not Responding");
+        radioButtonC4.setText(R.string.answer_4c);
         RadioButton radioButtonD4 = (RadioButton) findViewById(R.id.radioButtonD4);
-        radioButtonD4.setText("None of these");
+        radioButtonD4.setText(R.string.answer_4d);
     }
 
 
@@ -114,8 +114,8 @@ public class MainActivity extends AppCompatActivity {
     public void thirdQuestion() {
         TextView thirdQuestionTextView = (TextView) findViewById(R.id.question3_text_view);
         EditText editTextThird = (EditText) findViewById(R.id.edit_text_third);
-        String text = editTextThird.getText().toString();
-        if (text.equals("Services")) {
+        String text = editTextThird.getText().toString().trim();
+        if (text.equalsIgnoreCase(getString(R.string.answer_3))) {
             thirdQuestionTextView.setTextColor(Color.parseColor("#8BC34A"));
             goodAnswers = goodAnswers + 1;
         } else {
